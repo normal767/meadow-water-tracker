@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meadow Water Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Decorative landscape -->
+  <div class="landscape" aria-hidden="true">
+    <div class="sun-cloud">
+      <div class="sun"></div>
+      <div class="cloud covering-cloud"></div>
+    </div>
+
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+
+    <div class="butterfly butterfly-one"><span></span></div>
+    <div class="butterfly butterfly-two"><span></span></div>
+    <div class="butterfly butterfly-three"><span></span></div>
+    <div class="butterfly butterfly-four"><span></span></div>
+
+    <div class="garden">
+      <span class="plant">🌿</span>
+      <span class="plant">🌼</span>
+      <span class="plant">🌷</span>
+      <span class="plant">🌱</span>
+      <span class="plant">🌸</span>
+      <span class="plant">🌿</span>
+      <span class="plant">🌻</span>
+      <span class="plant">🌷</span>
+      <span class="plant">🌱</span>
+      <span class="plant">🌼</span>
+      <span class="plant">🌸</span>
+      <span class="plant">🌿</span>
+    </div>
+  </div>
+
+  <main>
+    <h1>Drink Water</h1>
+    <h3>Daily Goal: 2 Liters</h3>
+
+    <p class="instruction">
+      Click any glass to log a drink. Click it again to undo.
+    </p>
+
+    <p class="status" id="status" aria-live="polite">
+      Drank 0 ml · 0% complete
+    </p>
+
+    <div class="scene">
+      <div class="table">
+        <!-- Water jug and remaining volume -->
+        <div class="jug">
+          <div class="jug-handle"></div>
+
+          <div class="jug-body">
+            <div class="water" id="water"></div>
+
+            <div class="jug-label">
+              <span>Remaining</span>
+              <strong id="remaining">2 L</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Each cup can be selected independently -->
+        <div class="cups">
+          <button class="cup-small" type="button"
+            aria-label="Mark glass 1 as drunk" aria-pressed="false">250 ml</button>
+          <button class="cup-small" type="button"
+            aria-label="Mark glass 2 as drunk" aria-pressed="false">250 ml</button>
+          <button class="cup-small" type="button"
+            aria-label="Mark glass 3 as drunk" aria-pressed="false">250 ml</button>
+          <button class="cup-small" type="button"
+            aria-label="Mark glass 4 as drunk" aria-pressed="false">250 ml</button>
+          <button class="cup-small" type="button"
+            aria-label="Mark glass 5 as drunk" aria-pressed="false">250 ml</button>
+          <button class="cup-small" type="button"
+            aria-label="Mark glass 6 as drunk" aria-pressed="false">250 ml</button>
+          <button class="cup-small" type="button"
+            aria-label="Mark glass 7 as drunk" aria-pressed="false">250 ml</button>
+          <button class="cup-small" type="button"
+            aria-label="Mark glass 8 as drunk" aria-pressed="false">250 ml</button>
+        </div>
+
+        <!-- Wooden tabletop and legs -->
+        <div class="table-top"></div>
+        <div class="table-leg left"></div>
+        <div class="table-leg right"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Temporary encouragement message -->
+  <div class="cheer" id="cheer" role="status"
+    aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
